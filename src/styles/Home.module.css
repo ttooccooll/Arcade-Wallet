@@ -3,6 +3,11 @@
   src: url("alarm clock.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "MyFont2";
+  src: url("Atari.ttf") format("truetype");
+}
+
 .main {
   position:relative;
   text-align: center;
@@ -13,17 +18,23 @@
 }
 
 .modal {
-  width: 90%;
+  width: 85%;
   margin: 10px auto;
   transition: all 0.3s ease;
   padding: 20px;
   display: flex;
   display-direction: column;
+  color: limegreen;
+  text-shadow: 0 0 1px darkgreen, 0 0 1px darkgreen, 0 0 1px darkgreen,
+  0 0 1px darkgreen;
 }
 
 .modal h2 {
   font-family: "MyFont2";
   font-size: .5em;
+  color: limegreen;
+  text-shadow: 0 0 1px darkgreen, 0 0 1px darkgreen, 0 0 1px darkgreen,
+  0 0 1px darkgreen;
 }
 
 .modal input {
@@ -129,7 +140,7 @@
 
 .buttonRow {
   margin-top: 20px;
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -499,6 +510,11 @@ button.purple:active {
 }
 
 .invoice {
-  
+  font-family: "MyFont2";
+  font-weight: 100;
   margin-top: 20px;
+  font-size: 8px;
+  color: limegreen;
+  text-shadow: 0 0 1px darkgreen, 0 0 1px darkgreen, 0 0 1px darkgreen,
+  0 0 1px darkgreen;
 }

@@ -36,7 +36,7 @@ function SendModal({ onClose }) {
     <div className={styles.modal}>
       <h2>Send Invoice</h2>
       <form onSubmit={handleSubmit} className={styles.buttonRow}>
-        <label>Invoice:</label>
+        <label>Invoice:&nbsp;</label>
         <br />
         <input type="text" value={invoice} onChange={e => setInvoice(e.target.value)} />
         <br />
@@ -71,7 +71,7 @@ function ReceiveModal({ onClose }) {
       <h2>Receive Amount</h2>
       {!submitted ? (
       <form onSubmit={handleSubmit} className={styles.buttonRow}>
-        <label>Amount:</label>
+        <label>Amount:&nbsp;</label>
         <br />
         <input type="number" value={amount} onChange={e => setAmount(e.target.value)} />
         <br />
@@ -80,12 +80,14 @@ function ReceiveModal({ onClose }) {
       </form>
       ) : (
         <>
+          <div className={styles.invoice}>
           <p>{message}</p>
-          <QRCode value={invoice} size={256} level="H" />
-          <br />
-          <span>Invoice:</span>
-          <br />
-          <span>{invoice}</span>
+            <QRCode value={invoice} size={156} level="H" />
+            <br />
+            <br />
+            <span>{invoice}</span>
+          </div>
+          <button className={`${styles.button} ${styles.purple}`} onClick={() => { onClose(); playMP3(); console.log('Play button clicked'); }}>Close</button>
         </>
       )}
     </div>

@@ -24,7 +24,8 @@ h1 {
   padding-top: 5px;
   border: 3px double blue;
   border-radius: 15px;
-  width: 95%;
+  width: 90%;
+  margin-left: 5%;
 }
 
 h3 {
@@ -118,10 +119,13 @@ button:active {
 }
 
 input {
-  background-color: black;
+  background-color: #1e1e1e;
   border-radius: 0;
   padding: 5px;
-  border: 1px solid brown;
+  border: 1px solid limegreen;
+  box-shadow: 0 0 2px limegreen, 0 0 2px limegreen, 0 0 2px limegreen,
+  0 0 2px limegreen, inset 0 0 2px limegreen, inset 0 0 2px limegreen, inset 0 0 2px limegreen,
+  inset 0 0 2px limegreen;
   height: fit-content;
   width: 20%;
 }
@@ -133,6 +137,9 @@ label {
   text-position: center;
   display: flex;
   align-items: center;
+  color: limegreen;
+  text-shadow: 0 0 1px darkgreen, 0 0 1px darkgreen, 0 0 1px darkgreen,
+  0 0 1px darkgreen;
 }
 
 span {
