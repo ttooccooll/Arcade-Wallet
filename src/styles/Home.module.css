@@ -22,17 +22,18 @@
 }
 
 .modal h2 {
-  margin-bottom: 15px;
+  font-family: "MyFont2";
+  font-size: .5em;
 }
 
 .modal input {
   padding: 10px;
   margin-bottom: 10px;
-  border-radius: 5px;
   font-family: "MyFontc";
   color: rgb(255, 0, 0);
   text-shadow: 0 0 1px #b43434, 0 0 2px rgb(195, 41, 41), 0 0 4px #be1a1a,
     0 0 8px #e40808;
+  font-size: 1.2em;
 }
 
 .modal button {
@@ -40,8 +41,8 @@
   text-shadow: darkgrey 1px 1px 1px, darkgrey -1px -1px 1px,
     darkgrey -1px 1px 1px, darkgrey 1px -1px 1px;
   margin-left: 2rem;
-  width: 3.8rem;
-  height: 3.8rem;
+  width: 3.6rem;
+  height: 3.6rem;
   text-align: center;
   font-size: .8rem;
   font-weight: bold;
@@ -74,8 +75,8 @@
   margin: 0;
   padding: 0.3rem;
   background: #0000cc;
-  width: 4.6rem;
-  height: 4.6rem;
+  width: 4.4rem;
+  height: 4.4rem;
   border-radius: 50%;
   box-shadow: rgba(0, 0, 204, 0.8) 0 4px 5px inset,
     rgba(255, 255, 255, 0.5) 0 12px 5px inset,
@@ -133,6 +134,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  align-items: center;
   position: relative;
 }
 
@@ -141,6 +143,10 @@
   color: rgb(255, 0, 0);
   text-shadow: 0 0 3px #b43434, 0 0 7px rgb(195, 41, 41), 0 0 12px #be1a1a,
     0 0 22px #e40808;
+  font-size: 1.5em;
+  background: black;
+  padding: 5px;
+  border: 1px solid brown;
 }
 
 
@@ -149,8 +155,8 @@ button.green {
   text-shadow: darkgrey 1px 1px 1px, darkgrey -1px -1px 1px,
     darkgrey -1px 1px 1px, darkgrey 1px -1px 1px;
   margin-left: 2rem;
-  width: 3.8rem;
-  height: 3.8rem;
+  width: 3.6rem;
+  height: 3.6rem;
   text-align: center;
   font-size: .8rem;
   font-weight: bold;
@@ -185,8 +191,8 @@ button.green:before {
   margin: 0;
   padding: 0.3rem;
   background: #00cc00; /* Changed */
-  width: 4.6rem;
-  height: 4.6rem;
+  width: 4.4rem;
+  height: 4.4rem;
   border-radius: 50%;
   box-shadow: rgba(0, 204, 0, 0.8) 0 4px 5px inset, /* Changed */
     rgba(255, 255, 255, 0.5) 0 12px 5px inset,
@@ -236,8 +242,8 @@ button.orange {
   text-shadow: darkgrey 1px 1px 1px, darkgrey -1px -1px 1px,
     darkgrey -1px 1px 1px, darkgrey 1px -1px 1px;
   margin-left: 3rem;
-  width: 3.8rem;
-  height: 3.8rem;
+  width: 3.6rem;
+  height: 3.6rem;
   text-align: center;
   font-size: .8rem;
   font-weight: bold;
@@ -272,8 +278,8 @@ button.orange:before {
   margin: 0;
   padding: 0.3rem;
   background: #ff9900; /* Changed */
-  width: 4.6rem;
-  height: 4.6rem;
+  width: 4.4rem;
+  height: 4.4rem;
   border-radius: 50%;
   box-shadow: rgba(255, 153, 0, 0.8) 0 4px 5px inset, /* Changed */
     rgba(255, 255, 255, 0.5) 0 12px 5px inset,
@@ -323,8 +329,8 @@ button.darkorange {
   text-shadow: darkgrey 1px 1px 1px, darkgrey -1px -1px 1px,
     darkgrey -1px 1px 1px, darkgrey 1px -1px 1px;
   margin-left: 3rem;
-  width: 3.8rem;
-  height: 3.8rem;
+  width: 3.6rem;
+  height: 3.6rem;
   text-align: center;
   font-size: .8rem;
   font-weight: bold;
@@ -359,8 +365,8 @@ button.darkorange:before {
   margin: 0;
   padding: 0.3rem;
   background: #cc6600; /* Changed to match the button color */
-  width: 4.6rem;
-  height: 4.6rem;
+  width: 4.4rem;
+  height: 4.4rem;
   border-radius: 50%;
   box-shadow: rgba(204, 102, 0, 0.8) 0 4px 5px inset, /* Changed to match the button color */
     rgba(255, 255, 255, 0.5) 0 12px 5px inset,
@@ -410,8 +416,8 @@ button.purple {
   text-shadow: darkgrey 1px 1px 1px, darkgrey -1px -1px 1px,
     darkgrey -1px 1px 1px, darkgrey 1px -1px 1px;
   margin-left: 2rem;
-  width: 3.8rem;
-  height: 3.8rem;
+  width: 3.6rem;
+  height: 3.6rem;
   text-align: center;
   font-size: .8rem;
   font-weight: bold;
@@ -446,8 +452,8 @@ button.purple:before {
   margin: 0;
   padding: 0.3rem;
   background: #660066; /* Adjusted shade */
-  width: 4.6rem;
-  height: 4.6rem;
+  width: 4.4rem;
+  height: 4.4rem;
   border-radius: 50%;
   box-shadow: rgba(102, 0, 102, 0.8) 0 4px 5px inset, /* Adjusted shade */
     rgba(255, 255, 255, 0.5) 0 12px 5px inset,

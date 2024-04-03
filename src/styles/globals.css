@@ -3,9 +3,32 @@
   src: url("alarm clock.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "MyFont1";
+  src: url("title.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "MyFont2";
+  src: url("Atari.ttf") format("truetype");
+}
+
 body {
   background-color: #121212;
   color: #fff;
+}
+
+h1 {
+  font-family: "MyFont1";
+  font-weight: 100;
+  padding-top: 5px;
+  border: 3px double blue;
+  border-radius: 15px;
+  width: 95%;
+}
+
+h3 {
+  font-family: "MyFont2";
 }
 
 button {
@@ -13,8 +36,8 @@ button {
   text-shadow: darkgrey 1px 1px 1px, darkgrey -1px -1px 1px,
     darkgrey -1px 1px 1px, darkgrey 1px -1px 1px;
   margin-left: 2rem;
-  width: 3.8rem;
-  height: 3.8rem;
+  width: 3.6rem;
+  height: 3.6rem;
   text-align: center;
   font-size: .8rem;
   font-weight: bold;
@@ -36,7 +59,6 @@ button {
   border-radius: 500px;
   border: red 1px solid;
   display: block;
-  margin-top: 0.1rem;
 }
 
 button:before {
@@ -49,8 +71,8 @@ button:before {
   margin: 0;
   padding: 0.3rem;
   background: #cc0000;
-  width: 4.6rem;
-  height: 4.6rem;
+  width: 4.4rem;
+  height: 4.4rem;
   border-radius: 50%;
   box-shadow: rgba(204, 0, 0, 0.8) 0 4px 5px inset,
     rgba(255, 255, 255, 0.5) 0 12px 5px inset,
@@ -96,12 +118,21 @@ button:active {
 }
 
 input {
-  background-color: #333;
-  color: #ddd;
+  background-color: black;
+  border-radius: 0;
+  padding: 5px;
+  border: 1px solid brown;
+  height: fit-content;
+  width: 20%;
 }
 
 label {
+  font-family: "MyFont2";
+  font-size: .1em;
   color: #ddd;
+  text-position: center;
+  display: flex;
+  align-items: center;
 }
 
 span {

@@ -15,10 +15,10 @@ function SendModal({ onClose }) {
     const result = await payInvoice(invoice);
 
     if (result || !result?.message === "Error fetching data") {
-      setPaymentMessage("Payment successful!");
+      alert("Payment successful!");
       setInvoice('');
     } else {
-      setPaymentMessage('Payment failed...');
+      alert('Payment failed...');
     }
   };
 
@@ -48,9 +48,9 @@ function ReceiveModal({ onClose }) {
     const paymentRequest = await createInvoice(amount);
     if (paymentRequest) {
       setInvoice(paymentRequest);
-      setMessage('Invoice created successfully.');
+      alert('Invoice created successfully.');
     } else {
-      setMessage('Error creating invoice.');
+      alert('Error creating invoice.');
     }
   };
 
@@ -154,6 +154,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <h1>Super Bitcoin Wallet</h1>
         <h3>Price: $ <span className={styles.value}>{price}</span></h3>
         <h3>Balance: <span className={styles.value}>{balance}</span> sats</h3>
         <h3>Fiat Balance: $ <span className={styles.value}>{fiatBalance}</span></h3>
@@ -161,6 +162,8 @@ export default function Home() {
           <button className={styles.button} onClick={() => setShowSendModal(true)}>Send</button>
           <button className={`${styles.button} ${styles.green}`} onClick={() => setShowReceiveModal(true)}>Receive</button>
         </div>
+        <br/>
+        <br/>
         {showSendModal && <SendModal onClose={() => setShowSendModal(false)} styles={styles} />}
         {showReceiveModal && <ReceiveModal onClose={() => setShowReceiveModal(false)} styles={styles} />}
         <Appz setPrice={setPrice} />
