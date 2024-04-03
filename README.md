@@ -1,0 +1,1 @@
+Your lightning browser extension wallet does not feel like a 1980s arcade game. That stinks. This fixes that.

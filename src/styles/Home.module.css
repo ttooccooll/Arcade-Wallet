@@ -1,0 +1,493 @@
+@font-face {
+  font-family: "MyFontc";
+  src: url("alarm clock.ttf") format("truetype");
+}
+
+.main {
+  position:relative;
+  text-align: center;
+  padding: 5vh 0;
+  background-color: #1e1e1e;
+  z-index: 1;
+  color: #f0f0f0;
+}
+
+.modal {
+  width: 90%;
+  margin: 10px auto;
+  transition: all 0.3s ease;
+  padding: 20px;
+  display: flex;
+  display-direction: rows;
+}
+
+.modal h2 {
+  margin-bottom: 15px;
+}
+
+.modal input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-family: "MyFontc";
+  color: rgb(255, 0, 0);
+  text-shadow: 0 0 1px #b43434, 0 0 2px rgb(195, 41, 41), 0 0 4px #be1a1a,
+    0 0 8px #e40808;
+}
+
+.modal button {
+  position: relative;
+  text-shadow: darkgrey 1px 1px 1px, darkgrey -1px -1px 1px,
+    darkgrey -1px 1px 1px, darkgrey 1px -1px 1px;
+  margin-left: 2rem;
+  width: 3.8rem;
+  height: 3.8rem;
+  text-align: center;
+  font-size: .8rem;
+  font-weight: bold;
+  background-color: blue;
+  background-image: radial-gradient(
+    1.2rem 1.2rem,
+    circle closest-side,
+    blue 0.5rem,
+    #ff8080 1rem,
+    #ff8080 1.2rem,
+    #cc0000 1.8rem
+  );
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.4rem 0.2rem,
+    rgba(255, 255, 255, 0.7) 0 0.1rem 0.1rem inset, blue 0 0.3rem 0.4rem inset,
+    rgba(0, 0, 0, 0.3) 0 0.8rem 0.4rem inset,
+    rgba(255, 255, 255, 0.5) 0 -2px 3px inset, blue 0 -7px 20px inset;
+  border-radius: 5000px;
+  border: blue 1px solid;
+}
+
+.modal button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0.3rem;
+  background: #0000cc;
+  width: 4.6rem;
+  height: 4.6rem;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 204, 0.8) 0 4px 5px inset,
+    rgba(255, 255, 255, 0.5) 0 12px 5px inset,
+    rgba(0, 0, 153, 0.7) 0 -12px 5px inset,
+    rgba(0, 0, 0, 0.8) 0 4px 8px;
+}
+
+.modal button:hover {
+  cursor: pointer;
+  font-size: .7rem;
+  background-image: radial-gradient(
+    1.2rem 1.2rem,
+    circle closest-side,
+    blue 0.5rem,
+    #ff8080 1.1rem,
+    #ff8080 1.2rem,
+    #cc0000 1.8rem
+  );
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.4rem 0.2rem,
+    rgba(275, 255, 255, 0.7) 0 0.1rem 0.1rem inset, lightblue 0 0.3rem 0.4rem inset,
+    rgba(0, 0, 0, 0.3) 0 0.8rem 0.9rem inset,
+    rgba(255, 255, 275, 0.5) 0 -2px 3px inset, blue 0 -7px 20px inset;
+}
+
+.modal button:active {
+  cursor: crosshair;
+  font-size: .8rem;
+  background-image: radial-gradient(
+    1.2rem 1.2rem,
+    circle closest-side,
+    black 0.5rem,
+    #ff8080 1.1rem,
+    #ff8080 1.2rem,
+    #cc0000 1.8rem
+  );
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.4rem 0.2rem,
+    rgba(275, 255, 255, 0.7) 0 0.1rem 0.1rem inset, darkblue 0 0.3rem 0.4rem inset,
+    rgba(0, 0, 0, 0.3) 0 0.8rem 0.9rem inset,
+    rgba(255, 255, 275, 0.5) 0 -2px 3px inset, blue 0 -7px 20px inset;
+}
+
+.modal input:focus {
+  border-color: #76ff03;
+  box-shadow: 0 0 5px #76ff03;
+}
+
+.buttonRow {
+  margin-top: 20px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.value {
+  font-family: "MyFontc";
+  color: rgb(255, 0, 0);
+  text-shadow: 0 0 3px #b43434, 0 0 7px rgb(195, 41, 41), 0 0 12px #be1a1a,
+    0 0 22px #e40808;
+}
+
+
+button.green {
+  position: relative;
+  text-shadow: darkgrey 1px 1px 1px, darkgrey -1px -1px 1px,
+    darkgrey -1px 1px 1px, darkgrey 1px -1px 1px;
+  margin-left: 2rem;
+  width: 3.8rem;
+  height: 3.8rem;
+  text-align: center;
+  font-size: .8rem;
+  font-weight: bold;
+  background-color: green; /* Changed */
+  background-image: radial-gradient(
+    1.2rem 1.2rem,
+    circle closest-side,
+    green 0.5rem, /* Changed */
+    #80ff80 1rem, /* Changed */
+    #80ff80 1.2rem, /* Changed */
+    #00cc00 1.8rem /* Changed */
+  );
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.4rem 0.2rem,
+    rgba(255, 255, 255, 0.7) 0 0.1rem 0.1rem inset, green 0 0.3rem 0.4rem inset, /* Changed */
+    rgba(0, 0, 0, 0.3) 0 0.8rem 0.4rem inset,
+    rgba(255, 255, 255, 0.5) 0 -2px 3px inset, green 0 -7px 20px inset; /* Changed */
+  border-radius: 500px;
+  border: green 1px solid; /* Changed */
+  display: block;
+  margin-top: 0.1rem;
+}
+
+button.green:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0.3rem;
+  background: #00cc00; /* Changed */
+  width: 4.6rem;
+  height: 4.6rem;
+  border-radius: 50%;
+  box-shadow: rgba(0, 204, 0, 0.8) 0 4px 5px inset, /* Changed */
+    rgba(255, 255, 255, 0.5) 0 12px 5px inset,
+    rgba(0, 153, 0, 0.7) 0 -12px 5px inset, rgba(0, 0, 0, 0.8) 0 4px 8px; /* Changed */
+}
+
+button.green:hover {
+  cursor: pointer;
+  font-size: .7rem;
+  background-image: radial-gradient(
+    1.2rem 1.2rem,
+    circle closest-side,
+    green 0.5rem, /* Changed */
+    #80ff80 1.1rem, /* Changed */
+    #80ff80 1.2rem, /* Changed */
+    #00cc00 1.8rem /* Changed */
+  );
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.4rem 0.2rem,
+    rgba(275, 255, 255, 0.7) 0 0.1rem 0.1rem inset, lightgreen 0 0.3rem 0.4rem inset, /* Changed */
+    rgba(0, 0, 0, 0.3) 0 0.8rem 0.9rem inset,
+    rgba(255, 255, 275, 0.5) 0 -2px 3px inset, green 0 -7px 20px inset; /* Changed */
+}
+
+button.green:active {
+  cursor: crosshair;
+  font-size: .8rem;
+  background-image: radial-gradient(
+    1.2rem 1.2rem,
+    circle closest-side,
+    black 0.5rem,
+    #80ff80 1.1rem, /* Changed */
+    #80ff80 1.2rem, /* Changed */
+    #00cc00 1.8rem /* Changed */
+  );
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.4rem 0.2rem,
+    rgba(275, 255, 255, 0.7) 0 0.1rem 0.1rem inset, darkgreen 0 0.3rem 0.4rem inset, /* Changed */
+    rgba(0, 0, 0, 0.3) 0 0.8rem 0.9rem inset,
+    rgba(255, 255, 275, 0.5) 0 -2px 3px inset, green 0 -7px 20px inset; /* Changed */
+}
+
+button.orange {
+  position: relative;
+  text-shadow: darkgrey 1px 1px 1px, darkgrey -1px -1px 1px,
+    darkgrey -1px 1px 1px, darkgrey 1px -1px 1px;
+  margin-left: 3rem;
+  width: 3.8rem;
+  height: 3.8rem;
+  text-align: center;
+  font-size: .8rem;
+  font-weight: bold;
+  background-color: orange; /* Changed */
+  background-image: radial-gradient(
+    1.2rem 1.2rem,
+    circle closest-side,
+    orange 0.5rem, /* Changed */
+    #ffcc80 1rem, /* Changed */
+    #ffcc80 1.2rem, /* Changed */
+    #ff9900 1.8rem /* Changed */
+  );
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.4rem 0.2rem,
+    rgba(255, 255, 255, 0.7) 0 0.1rem 0.1rem inset, orange 0 0.3rem 0.4rem inset, /* Changed */
+    rgba(0, 0, 0, 0.3) 0 0.8rem 0.4rem inset,
+    rgba(255, 255, 255, 0.5) 0 -2px 3px inset, orange 0 -7px 20px inset; /* Changed */
+  border-radius: 500px;
+  border: orange 1px solid; /* Changed */
+  display: block;
+  align-self: flex-end;
+}
+
+button.orange:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0.3rem;
+  background: #ff9900; /* Changed */
+  width: 4.6rem;
+  height: 4.6rem;
+  border-radius: 50%;
+  box-shadow: rgba(255, 153, 0, 0.8) 0 4px 5px inset, /* Changed */
+    rgba(255, 255, 255, 0.5) 0 12px 5px inset,
+    rgba(204, 102, 0, 0.7) 0 -12px 5px inset, rgba(0, 0, 0, 0.8) 0 4px 8px; /* Changed */
+}
+
+button.orange:hover {
+  cursor: pointer;
+  font-size: .7rem;
+  background-image: radial-gradient(
+    1.2rem 1.2rem,
+    circle closest-side,
+    orange 0.5rem, /* Changed */
+    #ffcc80 1.1rem, /* Changed */
+    #ffcc80 1.2rem, /* Changed */
+    #ff9900 1.8rem /* Changed */
+  );
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.4rem 0.2rem,
+    rgba(255, 255, 255, 0.7) 0 0.1rem 0.1rem inset, #ffcc80 0 0.3rem 0.4rem inset, /* Adjusted to match button color */
+    rgba(0, 0, 0, 0.3) 0 0.8rem 0.9rem inset,
+    rgba(255, 255, 275, 0.5) 0 -2px 3px inset, orange 0 -7px 20px inset; /* Adjusted to match button color */
+}
+
+button.orange:active {
+  cursor: crosshair;
+  font-size: .8rem;
+  background-image: radial-gradient(
+    1.2rem 1.2rem,
+    circle closest-side,
+    black 0.5rem,
+    #ffcc80 1.1rem, /* Changed */
+    #ffcc80 1.2rem, /* Changed */
+    #ff9900 1.8rem /* Changed */
+  );
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.4rem 0.2rem,
+    rgba(275, 255, 255, 0.7) 0 0.1rem 0.1rem inset, darkorange 0 0.3rem 0.4rem inset, /* Changed */
+    rgba(0, 0, 0, 0.3) 0 0.8rem 0.9rem inset,
+    rgba(255, 255, 275, 0.5) 0 -2px 3px inset, orange 0 -7px 20px inset; /* Changed */
+}
+
+button.darkorange {
+  position: relative;
+  text-shadow: darkgrey 1px 1px 1px, darkgrey -1px -1px 1px,
+    darkgrey -1px 1px 1px, darkgrey 1px -1px 1px;
+  margin-left: 3rem;
+  width: 3.8rem;
+  height: 3.8rem;
+  text-align: center;
+  font-size: .8rem;
+  font-weight: bold;
+  background-color: #ff6600; /* Changed to darker shade of orange */
+  background-image: radial-gradient(
+    1.2rem 1.2rem,
+    circle closest-side,
+    #ff6600 0.5rem, /* Changed to darker shade of orange */
+    #ff9933 1rem, /* Adjusted shade */
+    #ff9933 1.2rem, /* Adjusted shade */
+    #ffcc66 1.8rem /* Adjusted shade */
+  );
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.4rem 0.2rem,
+    rgba(255, 255, 255, 0.7) 0 0.1rem 0.1rem inset, #ff6600 0 0.3rem 0.4rem inset, /* Changed to darker shade of orange */
+    rgba(0, 0, 0, 0.3) 0 0.8rem 0.4rem inset,
+    rgba(255, 255, 255, 0.5) 0 -2px 3px inset, #ff6600 0 -7px 20px inset; /* Changed to darker shade of orange */
+  border-radius: 500px;
+  border: #ff6600 1px solid; /* Changed to darker shade of orange */
+  display: block;
+  margin-top: 0.1rem;
+}
+
+button.darkorange:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0.3rem;
+  background: #cc6600; /* Changed to match the button color */
+  width: 4.6rem;
+  height: 4.6rem;
+  border-radius: 50%;
+  box-shadow: rgba(204, 102, 0, 0.8) 0 4px 5px inset, /* Changed to match the button color */
+    rgba(255, 255, 255, 0.5) 0 12px 5px inset,
+    rgba(153, 76, 0, 0.7) 0 -12px 5px inset, rgba(0, 0, 0, 0.8) 0 4px 8px; /* Changed to match the button color */
+}
+
+button.darkorange:hover {
+  cursor: pointer;
+  font-size: .7rem;
+  background-image: radial-gradient(
+    1.2rem 1.2rem,
+    circle closest-side,
+    #ff6600 0.5rem, /* Changed to darker shade of orange */
+    #ff9933 1.1rem, /* Adjusted shade */
+    #ff9933 1.2rem, /* Adjusted shade */
+    #ffcc66 1.8rem /* Adjusted shade */
+  );
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.4rem 0.2rem,
+    rgba(275, 255, 255, 0.7) 0 0.1rem 0.1rem inset, #ffcc66 0 0.3rem 0.4rem inset, /* Adjusted shade */
+    rgba(0, 0, 0, 0.3) 0 0.8rem 0.9rem inset,
+    rgba(255, 255, 275, 0.5) 0 -2px 3px inset, #ff6600 0 -7px 20px inset; /* Changed to darker shade of orange */
+}
+
+button.darkorange:active {
+  cursor: crosshair;
+  font-size: .8rem;
+  background-image: radial-gradient(
+    1.2rem 1.2rem,
+    circle closest-side,
+    black 0.5rem,
+    #ff9933 1.1rem, /* Adjusted shade */
+    #ff9933 1.2rem, /* Adjusted shade */
+    #ffcc66 1.8rem /* Adjusted shade */
+  );
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.4rem 0.2rem,
+    rgba(275, 255, 255, 0.7) 0 0.1rem 0.1rem inset, #cc6600 0 0.3rem 0.4rem inset, /* Changed to darker shade of orange */
+    rgba(0, 0, 0, 0.3) 0 0.8rem 0.9rem inset,
+    rgba(255, 255, 275, 0.5) 0 -2px 3px inset, #ff6600 0 -7px 20px inset; /* Changed to darker shade of orange */
+}
+
+button.purple {
+  position: relative;
+  text-shadow: darkgrey 1px 1px 1px, darkgrey -1px -1px 1px,
+    darkgrey -1px 1px 1px, darkgrey 1px -1px 1px;
+  margin-left: 2rem;
+  width: 3.8rem;
+  height: 3.8rem;
+  text-align: center;
+  font-size: .8rem;
+  font-weight: bold;
+  background-color: #800080; /* Purple */
+  background-image: radial-gradient(
+    1.2rem 1.2rem,
+    circle closest-side,
+    #800080 0.5rem, /* Purple */
+    #993399 1rem, /* Adjusted shade */
+    #993399 1.2rem, /* Adjusted shade */
+    #cc66cc 1.8rem /* Adjusted shade */
+  );
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.4rem 0.2rem,
+    rgba(255, 255, 255, 0.7) 0 0.1rem 0.1rem inset, #800080 0 0.3rem 0.4rem inset, /* Purple */
+    rgba(0, 0, 0, 0.3) 0 0.8rem 0.4rem inset,
+    rgba(255, 255, 255, 0.5) 0 -2px 3px inset, #800080 0 -7px 20px inset; /* Purple */
+  border-radius: 500px;
+  border: #800080 1px solid; /* Purple */
+  display: block;
+  margin-top: 1.9rem;
+}
+
+button.purple:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0.3rem;
+  background: #660066; /* Adjusted shade */
+  width: 4.6rem;
+  height: 4.6rem;
+  border-radius: 50%;
+  box-shadow: rgba(102, 0, 102, 0.8) 0 4px 5px inset, /* Adjusted shade */
+    rgba(255, 255, 255, 0.5) 0 12px 5px inset,
+    rgba(51, 0, 51, 0.7) 0 -12px 5px inset, rgba(0, 0, 0, 0.8) 0 4px 8px; /* Adjusted shade */
+}
+
+button.purple:hover {
+  cursor: pointer;
+  font-size: .7rem;
+  background-image: radial-gradient(
+    1.2rem 1.2rem,
+    circle closest-side,
+    #800080 0.5rem, /* Purple */
+    #993399 1.1rem, /* Adjusted shade */
+    #993399 1.2rem, /* Adjusted shade */
+    #cc66cc 1.8rem /* Adjusted shade */
+  );
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.4rem 0.2rem,
+    rgba(275, 255, 255, 0.7) 0 0.1rem 0.1rem inset, #cc66cc 0 0.3rem 0.4rem inset, /* Adjusted shade */
+    rgba(0, 0, 0, 0.3) 0 0.8rem 0.9rem inset,
+    rgba(255, 255, 275, 0.5) 0 -2px 3px inset, #800080 0 -7px 20px inset; /* Purple */
+}
+
+button.purple:active {
+  cursor: crosshair;
+  font-size: .8rem;
+  background-image: radial-gradient(
+    1.2rem 1.2rem,
+    circle closest-side,
+    black 0.5rem,
+    #993399 1.1rem, /* Adjusted shade */
+    #993399 1.2rem, /* Adjusted shade */
+    #cc66cc 1.8rem /* Adjusted shade */
+  );
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.4rem 0.2rem,
+    rgba(275, 255, 255, 0.7) 0 0.1rem 0.1rem inset, #330033 0 0.3rem 0.4rem inset, /* Purple */
+    rgba(0, 0, 0, 0.3) 0 0.8rem 0.9rem inset,
+    rgba(255, 255, 275, 0.5) 0 -2px 3px inset, #800080 0 -7px 20px inset; /* Purple */
+}
