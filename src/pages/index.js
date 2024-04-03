@@ -5,6 +5,16 @@ import QRCode from 'qrcode.react';
 import { getBalance, payInvoice, createInvoice } from '@/lightning/lnd-webln';
 import axios from 'axios';
 
+const playMP3 = () => {
+  const audio = new Audio("/kings.mp3");
+  audio.play();
+};
+
+const playMP4 = () => {
+  const audio = new Audio("/kingm.mp3");
+  audio.play();
+};
+
 function SendModal({ onClose }) {
   const [invoice, setInvoice] = useState('');
   const [paymentMessage, setPaymentMessage] = useState('');
@@ -31,7 +41,7 @@ function SendModal({ onClose }) {
         <input type="text" value={invoice} onChange={e => setInvoice(e.target.value)} />
         <br />
         <button className={`${styles.button} ${styles.darkorange}`} type="submit">Send</button>
-        <button className={styles.button} onClick={onClose}>Close</button>
+        <button className={styles.button} onClick={() => { onClose(); playMP3(); console.log('Play button clicked'); }}>Close</button>
       </form>
       {paymentMessage && <p>{paymentMessage}</p>}
     </div>
@@ -42,6 +52,7 @@ function ReceiveModal({ onClose }) {
   const [amount, setAmount] = useState('');
   const [invoice, setInvoice] = useState('');
   const [message, setMessage] = useState('');
+  const [submitted, setSubmitted] = useState(false);
   
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -49,6 +60,7 @@ function ReceiveModal({ onClose }) {
     if (paymentRequest) {
       setInvoice(paymentRequest);
       alert('Invoice created successfully.');
+      setSubmitted(true);
     } else {
       alert('Error creating invoice.');
     }
@@ -57,15 +69,16 @@ function ReceiveModal({ onClose }) {
   return (
     <div className={styles.modal}>
       <h2>Receive Amount</h2>
+      {!submitted ? (
       <form onSubmit={handleSubmit} className={styles.buttonRow}>
         <label>Amount:</label>
         <br />
         <input type="number" value={amount} onChange={e => setAmount(e.target.value)} />
         <br />
         <button className={`${styles.button} ${styles.orange}`} type="submit">Create</button>
-        <button className={`${styles.button} ${styles.purple}`} onClick={onClose}>Close</button>
+        <button className={`${styles.button} ${styles.purple}`} onClick={() => { onClose(); playMP3(); console.log('Play button clicked'); }}>Close</button>
       </form>
-      {invoice ? (
+      ) : (
         <>
           <p>{message}</p>
           <QRCode value={invoice} size={256} level="H" />
@@ -74,8 +87,6 @@ function ReceiveModal({ onClose }) {
           <br />
           <span>{invoice}</span>
         </>
-      ) : (
-        <p>{message}</p>
       )}
     </div>
   );
@@ -159,8 +170,8 @@ export default function Home() {
         <h3>Balance: <span className={styles.value}>{balance}</span> sats</h3>
         <h3>Fiat Balance: $ <span className={styles.value}>{fiatBalance}</span></h3>
         <div className={styles.buttonRow}>
-          <button className={styles.button} onClick={() => setShowSendModal(true)}>Send</button>
-          <button className={`${styles.button} ${styles.green}`} onClick={() => setShowReceiveModal(true)}>Receive</button>
+          <button className={styles.button} onClick={() => { setShowSendModal(true); playMP4(); }}>Send</button>
+          <button className={`${styles.button} ${styles.green}`} onClick={() => { setShowReceiveModal(true); playMP4(); }}>Receive</button>
         </div>
         <br/>
         <br/>
