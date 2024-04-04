@@ -82,7 +82,7 @@ function ReceiveModal({ onClose }) {
         <>
           <div className={styles.invoice}>
           <p>{message}</p>
-            <QRCode value={invoice} size={156} level="H" />
+            <QRCode value={invoice} size={200} level="H" />
             <br />
             <br />
             <span>{invoice}</span>
