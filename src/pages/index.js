@@ -172,8 +172,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <h1>Super Bitcoin Wallet</h1>
       <main className={styles.main}>
-        <h1>Super Bitcoin Wallet</h1>
         <h3>Price: $ <span className={styles.value}>{price}</span></h3>
         <h3>Balance: <span className={styles.value}>{balance}</span> sats</h3>
         <h3>Fiat Balance: $ <span className={styles.value}>{fiatBalance}</span></h3>
