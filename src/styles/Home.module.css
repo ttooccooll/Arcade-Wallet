@@ -575,9 +575,9 @@ button.logout {
   margin-left: 0px;
   text-shadow: black 2px 1px 5px;
   box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.4rem 0.2rem,
-  rgba(255, 255, 255, 0.7) 0 0.1rem 0.1rem inset, red 0 .6rem 0.8rem inset,
+  rgba(255, 255, 255, 0.7) 0 0.1rem 0.1rem inset, darkred 0 .6rem 0.8rem inset,
   rgba(0, 0, 0, 0.3) 0 1.6rem 0.8rem inset,
-  rgba(255, 255, 255, 0.5) 0 -2px 3px inset, red 0 -7px 20px inset;
+  rgba(255, 255, 255, 0.5) 0 -2px 3px inset, darkred 0 -7px 20px inset;
   position: relative;
   border-radius: 0;
   height: 100px;
@@ -632,9 +632,9 @@ button.logout:active {
 button.FAQ {
   text-shadow: black 2px 1px 5px;
   box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.4rem 0.2rem,
-  rgba(255, 255, 255, 0.7) 0 0.1rem 0.1rem inset, red 0 .6rem 0.8rem inset,
+  rgba(255, 255, 255, 0.7) 0 0.1rem 0.1rem inset, darkred 0 .6rem 0.8rem inset,
   rgba(0, 0, 0, 0.3) 0 1.6rem 0.8rem inset,
-  rgba(255, 255, 255, 0.5) 0 -2px 3px inset, red 0 -7px 20px inset;
+  rgba(255, 255, 255, 0.5) 0 -2px 3px inset, darkred 0 -7px 20px inset;
   position: relative;
   border-radius: 0;
   height: 100px;
