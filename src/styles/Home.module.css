@@ -586,6 +586,8 @@ button.logout {
   text-align: end;
   font-size: 13px;
   background-color:#420D09;
+  text-shadow: 0 0 3px #b43434, 0 0 7px rgb(95, 41, 41), 0 0 12px #be1a1a,
+  0 0 22px #e40808;
 }
 
 button.logout:before {
@@ -605,18 +607,26 @@ button.logout:before {
 
 button.logout:hover {
   box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.4rem 0.2rem,
-  rgba(255, 255, 255, 0.7) 0 0.3rem 0.3rem inset, red 0 .6rem 0.8rem inset,
+  rgba(255, 255, 255, 0.7) 0 0.1rem 0.1rem inset,
+  rgba(205, 0, 0, 0.7) 0 .6rem 0.8rem inset,
   rgba(0, 0, 0, 0.3) 0 1.6rem 0.8rem inset,
-  rgba(255, 255, 255, 0.5) 0 -2px 3px inset, red 0 -7px 20px inset;
+  rgba(255, 255, 255, 0.5) 0 -2px 3px inset,
+  rgba(205, 0, 0, 0.5) 0 -7px 20px inset;
   font-size: 12px;
+  text-shadow: 0 0 3px #b43434, 0 0 7px rgb(195, 41, 41), 0 0 12px #be1a1a,
+  0 0 22px #e40808;
 }
 
 button.logout:active {
   box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.4rem 0.2rem,
-  rgba(255, 255, 255, 0.7) 0 0.3rem 0.3rem inset, darkred 0 .6rem 0.8rem inset,
-  rgba(0, 0, 0, 0.3) 0 1.6rem 1rem inset,
-  rgba(255, 255, 255, 0.5) 0 -2px 3px inset, red 0 -7px 20px inset;
+  rgba(255, 255, 255, 0.7) 0 0.1rem 0.1rem inset,
+  rgba(105, 0, 0, 0.7) 0 .6rem 0.8rem inset,
+  rgba(0, 0, 0, 0.3) 0 1.6rem 0.8rem inset,
+  rgba(255, 255, 255, 0.5) 0 -2px 3px inset,
+  rgba(105, 0, 0, 0.5) 0 -7px 20px inset;
   font-size: 10px;
+  text-shadow: 0 0 13px #b43434, 0 0 17px rgb(195, 41, 41), 0 0 12px #be1a1a,
+  0 0 22px #e40808;
 }
 
 button.FAQ {
@@ -633,6 +643,8 @@ button.FAQ {
   text-align: end;
   font-size: 18px;
   background-color:#420D09;
+  text-shadow: 0 0 3px #b43434, 0 0 7px rgb(95, 41, 41), 0 0 12px #be1a1a,
+  0 0 22px #e40808;
 }
 
 button.FAQ:before {
@@ -652,16 +664,24 @@ button.FAQ:before {
 
 button.FAQ:hover {
   box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.4rem 0.2rem,
-  rgba(255, 255, 255, 0.7) 0 0.3rem 0.3rem inset, red 0 .6rem 0.8rem inset,
+  rgba(255, 255, 255, 0.7) 0 0.1rem 0.1rem inset,
+  rgba(205, 0, 0, 0.7) 0 .6rem 0.8rem inset,
   rgba(0, 0, 0, 0.3) 0 1.6rem 0.8rem inset,
-  rgba(255, 255, 255, 0.5) 0 -2px 3px inset, red 0 -7px 20px inset;
+  rgba(255, 255, 255, 0.5) 0 -2px 3px inset,
+  rgba(205, 0, 0, 0.5) 0 -7px 20px inset;
   font-size: 16px;
+  text-shadow: 0 0 3px #b43434, 0 0 7px rgb(195, 41, 41), 0 0 12px #be1a1a,
+  0 0 22px #e40808;
 }
 
 button.FAQ:active {
   box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.4rem 0.2rem,
-  rgba(255, 255, 255, 0.7) 0 0.3rem 0.3rem inset, darkred 0 .6rem 0.8rem inset,
-  rgba(0, 0, 0, 0.3) 0 1.6rem 1rem inset,
-  rgba(255, 255, 255, 0.5) 0 -2px 3px inset, red 0 -7px 20px inset;
+  rgba(255, 255, 255, 0.7) 0 0.1rem 0.1rem inset,
+  rgba(105, 0, 0, 0.7) 0 .6rem 0.8rem inset,
+  rgba(0, 0, 0, 0.3) 0 1.6rem 0.8rem inset,
+  rgba(255, 255, 255, 0.5) 0 -2px 3px inset,
+  rgba(105, 0, 0, 0.5) 0 -7px 20px inset;
   font-size: 12px;
+  text-shadow: 0 0 13px #b43434, 0 0 17px rgb(195, 41, 41), 0 0 12px #be1a1a,
+  0 0 22px #e40808;
 }
