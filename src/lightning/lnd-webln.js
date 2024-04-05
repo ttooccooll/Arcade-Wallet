@@ -53,3 +53,16 @@ export const createInvoice = async (amount) => {
     return null;
   }
 };
+
+export const logOut = async () => {
+  if (typeof window.webln !== 'undefined' && window.webln.isEnabled) {
+    try {
+      // Disable the WebLN extension
+      await window.webln.disable();
+      console.log("WebLN disabled successfully");
+    } catch (error) {
+      console.error("Error disabling WebLN:", error);
+      // Handle any errors that occur during logout
+    }
+  }
+};

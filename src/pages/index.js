@@ -2,7 +2,7 @@ import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import React, { useState, useEffect } from 'react';
 import QRCode from 'qrcode.react';
-import { getBalance, payInvoice, createInvoice } from '@/lightning/lnd-webln';
+import { getBalance, payInvoice, createInvoice, logOut } from '@/lightning/lnd-webln';
 import axios from 'axios';
 
 const playMP3 = () => {
@@ -12,6 +12,11 @@ const playMP3 = () => {
 
 const playMP4 = () => {
   const audio = new Audio("/kingm.mp3");
+  audio.play();
+};
+
+const playMP5 = () => {
+  const audio = new Audio("/coinreturn.mp3");
   audio.play();
 };
 
@@ -118,6 +123,7 @@ function Appz() {
 export default function Home() {
   const [showSendModal, setShowSendModal] = useState(false);
   const [showReceiveModal, setShowReceiveModal] = useState(false);
+  const [showFAQModal, setShowFAQModal] = useState(false);
   const [balance, setBalance] = useState(null);
   const [price, setPrice] = useState(null);
   const [fiatBalance, setFiatBalance] = useState(null);
@@ -181,6 +187,12 @@ export default function Home() {
         {showReceiveModal && <ReceiveModal onClose={() => setShowReceiveModal(false)} styles={styles} />}
         <Appz setPrice={setPrice} />
       </main>
+      <div className={styles.coinreturn} >
+          <div className={styles.slotf}></div>
+          <button className={styles.FAQ} onClick={() => { setShowFAQModal(true); playMP5(); }} >------<br />FAQ<br />------</button>
+          <div className={styles.slot}></div>
+          <button className={styles.logout} onClick={() => { logOut(true); playMP5(); }} >-------------<br />LOGOUT<br />-------------</button>
+      </div>
     </>
   )
 }

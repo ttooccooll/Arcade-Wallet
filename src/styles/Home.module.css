@@ -11,10 +11,14 @@
 .main {
   position:relative;
   text-align: center;
-  padding: 5vh 0;
+  padding-top: 5vh;
   background-color: #1e1e1e;
   z-index: 1;
   color: #f0f0f0;
+  box-shadow: rgba(0, 0, 0, 1) 0 -3px 15px, rgba(0, 0, 0, 0.8) 0 4px 5px inset,
+  rgba(0, 0, 0, 0.5) 0 12px 5px inset,
+  rgba(0, 0, 0, 0.7) 0 -12px 5px inset, rgba(0, 0, 0, 0.8) 0 4px 8px, rgba(0, 0, 0, 0.8) 0 4px 8px,
+  rgba(139, 69, 19, 0.8) 0 4px 8px;
 }
 
 .modal {
@@ -524,4 +528,133 @@ button.purple:active {
   color: limegreen;
   text-shadow: 0 0 1px darkgreen, 0 0 1px darkgreen, 0 0 1px darkgreen,
   0 0 1px darkgreen;
+}
+
+.coinreturn {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  width: 400px;
+  margin: 150px auto; 
+  background-color: #121212;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+  position: relative;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 1) 0 -3px 15px, rgba(0, 0, 0, 0.8) 0 4px 5px inset,
+  rgba(0, 0, 0, 0.5) 0 12px 5px inset,
+  rgba(0, 0, 0, 0.7) 0 -12px 5px inset, rgba(0, 0, 0, 0.8) 0 4px 8px, rgba(0, 0, 0, 0.8) 0 4px 8px,
+  rgba(139, 69, 19, 0.8) 0 4px 8px;
+}
+
+.slot {
+  background: black;
+  height: 100px;
+  width: 8px;
+  margin-left: 100px;
+  margin-right: 10px;
+  border: 1px darkgrey;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.4rem 0.2rem,
+  rgba(255, 255, 255, 0.7) 0 0.1rem 0.1rem
+}
+
+.slotf {
+  background: black;
+  height: 100px;
+  width: 8px;
+  margin-right: -20px;
+  border: 1px darkgrey;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.4rem 0.2rem,
+  rgba(255, 255, 255, 0.7) 0 0.1rem 0.1rem
+}
+
+button.logout {
+  margin-left: 0px;
+  text-shadow: black 2px 1px 5px;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.4rem 0.2rem,
+  rgba(255, 255, 255, 0.7) 0 0.1rem 0.1rem inset, red 0 .6rem 0.8rem inset,
+  rgba(0, 0, 0, 0.3) 0 1.6rem 0.8rem inset,
+  rgba(255, 255, 255, 0.5) 0 -2px 3px inset, red 0 -7px 20px inset;
+  position: relative;
+  border-radius: 0;
+  height: 100px;
+  width: 75px;
+  color: red;
+  text-align: end;
+  font-size: 13px;
+  background-color:#420D09;
+}
+
+button.logout:before {
+  content: ""; 
+  position: absolute; 
+  top: 50%;
+  left: 40%; 
+  transform: translate(-50%, -50%);
+  border-radius: 0;
+  height: 145px;
+  width: 110px;
+  background-color: #1e1e1e;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 4px 5px inset,
+  rgba(0, 0, 0, 0.5) 0 12px 5px inset,
+  rgba(0, 0, 0, 0.7) 0 -12px 5px inset, rgba(0, 0, 0, 0.8) 0 4px 8px;
+}
+
+button.logout:hover {
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.4rem 0.2rem,
+  rgba(255, 255, 255, 0.7) 0 0.3rem 0.3rem inset, red 0 .6rem 0.8rem inset,
+  rgba(0, 0, 0, 0.3) 0 1.6rem 0.8rem inset,
+  rgba(255, 255, 255, 0.5) 0 -2px 3px inset, red 0 -7px 20px inset;
+}
+
+button.logout:active {
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.4rem 0.2rem,
+  rgba(255, 255, 255, 0.7) 0 0.3rem 0.3rem inset, darkred 0 .6rem 0.8rem inset,
+  rgba(0, 0, 0, 0.3) 0 1.6rem 1rem inset,
+  rgba(255, 255, 255, 0.5) 0 -2px 3px inset, red 0 -7px 20px inset;
+}
+
+button.FAQ {
+  text-shadow: black 2px 1px 5px;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.4rem 0.2rem,
+  rgba(255, 255, 255, 0.7) 0 0.1rem 0.1rem inset, red 0 .6rem 0.8rem inset,
+  rgba(0, 0, 0, 0.3) 0 1.6rem 0.8rem inset,
+  rgba(255, 255, 255, 0.5) 0 -2px 3px inset, red 0 -7px 20px inset;
+  position: relative;
+  border-radius: 0;
+  height: 100px;
+  width: 75px;
+  color: red;
+  text-align: end;
+  font-size: 18px;
+  background-color:#420D09;
+}
+
+button.FAQ:before {
+  content: ""; 
+  position: absolute; 
+  top: 50%;
+  left: 40%; 
+  transform: translate(-50%, -50%);
+  border-radius: 0;
+  height: 145px;
+  width: 110px;
+  background-color: #1e1e1e;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 4px 5px inset,
+  rgba(0, 0, 0, 0.5) 0 12px 5px inset,
+  rgba(0, 0, 0, 0.7) 0 -12px 5px inset, rgba(0, 0, 0, 0.8) 0 4px 8px;
+}
+
+button.FAQ:hover {
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.4rem 0.2rem,
+  rgba(255, 255, 255, 0.7) 0 0.3rem 0.3rem inset, red 0 .6rem 0.8rem inset,
+  rgba(0, 0, 0, 0.3) 0 1.6rem 0.8rem inset,
+  rgba(255, 255, 255, 0.5) 0 -2px 3px inset, red 0 -7px 20px inset;
+}
+
+button.FAQ:active {
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.4rem 0.2rem,
+  rgba(255, 255, 255, 0.7) 0 0.3rem 0.3rem inset, darkred 0 .6rem 0.8rem inset,
+  rgba(0, 0, 0, 0.3) 0 1.6rem 1rem inset,
+  rgba(255, 255, 255, 0.5) 0 -2px 3px inset, red 0 -7px 20px inset;
 }

@@ -14,9 +14,10 @@
 }
 
 body {
-  background-color: #121212;
+  background-image: url('/oak.jpeg');
   color: #fff;
 }
+
 
 h1 {
   font-family: "MyFont1";
