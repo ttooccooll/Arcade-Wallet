@@ -177,15 +177,13 @@ export default function Home() {
         <h3>Price: $ <span className={styles.value}>{price}</span></h3>
         <h3>Balance: <span className={styles.value}>{balance}</span> sats</h3>
         <h3>Fiat Balance: $ <span className={styles.value}>{fiatBalance}</span></h3>
+        {showSendModal && <SendModal onClose={() => setShowSendModal(false)} styles={styles} />}
+        {showReceiveModal && <ReceiveModal onClose={() => setShowReceiveModal(false)} styles={styles} />}
+        <Appz setPrice={setPrice} />
         <div className={styles.buttonRow}>
           <button className={styles.button} onClick={() => { setShowSendModal(true); playMP4(); }}>Send</button>
           <button className={`${styles.button} ${styles.green}`} onClick={() => { setShowReceiveModal(true); playMP4(); }}>Receive</button>
         </div>
-        <br/>
-        <br/>
-        {showSendModal && <SendModal onClose={() => setShowSendModal(false)} styles={styles} />}
-        {showReceiveModal && <ReceiveModal onClose={() => setShowReceiveModal(false)} styles={styles} />}
-        <Appz setPrice={setPrice} />
       </main>
       <div className={styles.coinreturn} >
           <div className={styles.slotf}></div>

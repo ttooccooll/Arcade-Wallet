@@ -153,7 +153,6 @@
 }
 
 .buttonRow {
-  margin-top: 20px;
   width: 85%;
   margin: 0 auto;
   display: flex;
@@ -161,6 +160,8 @@
   justify-content: flex-end;
   align-items: center;
   position: relative;
+  padding-bottom: 25px;
+  padding-top: 15px;
 }
 
 .value {
@@ -203,7 +204,6 @@ button.green {
   border-radius: 500px;
   border: green 1px solid; /* Changed */
   display: block;
-  margin-top: 0.1rem;
 }
 
 button.green:before {
@@ -377,7 +377,6 @@ button.darkorange {
   border-radius: 500px;
   border: #ff6600 1px solid; /* Changed to darker shade of orange */
   display: block;
-  margin-top: 0.1rem;
 }
 
 button.darkorange:before {
@@ -464,7 +463,6 @@ button.purple {
   border-radius: 500px;
   border: #800080 1px solid; /* Purple */
   display: block;
-  margin-top: 1.9rem;
 }
 
 button.purple:before {
@@ -588,6 +586,7 @@ button.logout {
   background-color:#420D09;
   text-shadow: 0 0 3px #b43434, 0 0 7px rgb(95, 41, 41), 0 0 12px #be1a1a,
   0 0 22px #e40808;
+  overflow: hide;
 }
 
 button.logout:before {
@@ -645,6 +644,7 @@ button.FAQ {
   background-color:#420D09;
   text-shadow: 0 0 3px #b43434, 0 0 7px rgb(95, 41, 41), 0 0 12px #be1a1a,
   0 0 22px #e40808;
+  overflow: hide;
 }
 
 button.FAQ:before {
