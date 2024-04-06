@@ -186,7 +186,7 @@ export default function Home() {
     if (!balance) fetchBalance();
     getPrice();
     getFiatBalance();
-  }, []);
+  }, );
 
   return (
     <>
