@@ -54,13 +54,20 @@ export const createInvoice = async (amount) => {
   }
 };
 
+
 export const logOut = async () => {
-  if (typeof window.webln !== 'undefined' && window.webln.isEnabled) {
-    try {
-      await window.webln.disable();
-      console.log("WebLN disabled successfully");
-    } catch (error) {
-      console.error("Error disabling WebLN:", error);
+    if (window.webln) {
+      try {
+        await window.webln.enable(); // Enabling WebLN
+        const balance = await window.webln.getBalance(); // Fetching balance
+        console.log("Balance fetched successfully");
+        return balance;
+      } catch (error) {
+        console.error("Error fetching balance:", error);
+        return 0;
+      }
+    } else {
+      console.error("WebLN not supported");
+      return null;
     }
-  }
-};
+  };

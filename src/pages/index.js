@@ -158,6 +158,7 @@ export default function Home() {
       setBalance(balanceResult?.balance);
     } else {
       console.error('Failed to fetch balance');
+      setBalance(0); 
     }
   };
 
@@ -165,7 +166,7 @@ export default function Home() {
     axios
       .get("https://api.coinbase.com/v2/prices/BTC-USD/spot")
       .then((res) => {
-        const formattedPrice = Number(res.data.data.amount).toFixed(4);
+        const formattedPrice = Number(res.data.data.amount).toFixed(2);
         setPrice(formattedPrice);
         updateChartData(formattedPrice);
       })
@@ -185,7 +186,7 @@ export default function Home() {
     if (!balance) fetchBalance();
     getPrice();
     getFiatBalance();
-  }, );
+  }, []);
 
   return (
     <>
@@ -212,7 +213,7 @@ export default function Home() {
           <div className={styles.slotf}></div>
           <button className={styles.FAQ} onClick={() => { setShowFAQModal(true); playMP5(); }} >------<br />FAQ<br />------</button>
           <div className={styles.slot}></div>
-          <button className={styles.logout} onClick={() => { logOut(true); playMP5(); }} >-------------<br />LOGOUT<br />-------------</button>
+          <button className={styles.logout} onClick={() => { logOut(); playMP5(); }} >-------------<br />LOGOUT<br />-------------</button>
       </div>
       {showFAQModal && <FAQModal onClose={() => setShowFAQModal(false)} styles={styles} />}
     </>
