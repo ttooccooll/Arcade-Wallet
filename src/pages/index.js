@@ -39,14 +39,18 @@ function SendModal({ onClose }) {
 
   return (
     <div className={styles.modal}>
-      <h2>Send Invoice</h2>
       <form onSubmit={handleSubmit} className={styles.buttonRow}>
-        <label>Invoice:&nbsp;</label>
-        <br />
-        <input type="text" value={invoice} onChange={e => setInvoice(e.target.value)} />
-        <br />
-        <button className={`${styles.button} ${styles.darkorange}`} type="submit">Send</button>
-        <button className={styles.button} onClick={() => { onClose(); playMP3(); console.log('Play button clicked'); }}>Close</button>
+        <div className={styles.machinez}>
+          <h2>Send Invoice</h2>
+          <label>Invoice:&nbsp;</label>
+          <br />
+          <input type="text" value={invoice} onChange={e => setInvoice(e.target.value)} />
+          <br />
+        </div>
+        <div className={styles.machine}>
+          <button className={`${styles.button} ${styles.darkorange}`} type="submit">Send</button>
+          <button className={styles.button} onClick={() => { onClose(); playMP3(); console.log('Play button clicked'); }}>Close</button>
+        </div>
       </form>
       {paymentMessage && <p>{paymentMessage}</p>}
     </div>
@@ -73,15 +77,19 @@ function ReceiveModal({ onClose }) {
 
   return (
     <div className={styles.modal}>
-      <h2>Receive Amount</h2>
       {!submitted ? (
       <form onSubmit={handleSubmit} className={styles.buttonRow}>
-        <label>Amount:&nbsp;</label>
-        <br />
-        <input type="number" value={amount} onChange={e => setAmount(e.target.value)} />
-        <br />
-        <button className={`${styles.button} ${styles.orange}`} type="submit">Create</button>
-        <button className={`${styles.button} ${styles.purple}`} onClick={() => { onClose(); playMP3(); console.log('Play button clicked'); }}>Close</button>
+        <div className={styles.machinez}>
+        <h2>Receive Amount</h2>
+          <label>Amount:&nbsp;</label>
+          <br />
+          <input type="number" value={amount} onChange={e => setAmount(e.target.value)} />
+          <br />
+        </div>
+        <div className={styles.machine}>
+          <button className={`${styles.button} ${styles.orange}`} type="submit">Create</button>
+          <button className={`${styles.button} ${styles.purple}`} onClick={() => { onClose(); playMP3(); console.log('Play button clicked'); }}>Close</button>
+        </div>
       </form>
       ) : (
         <>
@@ -95,6 +103,21 @@ function ReceiveModal({ onClose }) {
           <button className={`${styles.button} ${styles.purple}`} onClick={() => { onClose(); playMP3(); console.log('Play button clicked'); }}>Close</button>
         </>
       )}
+    </div>
+  );
+}
+
+function FAQModal({ onClose }) {
+  return (
+    <div className={styles.modalz}>
+      <div className={styles.row}>
+        <h2>FAQ</h2>
+        <p>Q: What is this? <br /><br /> A: It&apos;s a way to use your browser extension wallet but still feel like you&apos;re in the arcade of a pizza joint in 1989.</p>
+        <p>Q: Is this trustworthy? <br /><br /> A: I woudldn&apos;t use it for anything important.</p>
+        <p>Q: Can I send you all of my sats? <br /><br /> A: I will happily take your sats. Send them to @jasonb be on stacker.news. We can also just talk and what-not. My npub is there.</p>
+        <br />
+        <button className={`${styles.button} ${styles.purple}`} onClick={() => { onClose(); playMP3(); console.log('Play button clicked'); }}>Close</button>
+      </div>
     </div>
   );
 }
@@ -177,7 +200,7 @@ export default function Home() {
         <h3>Price: $ <span className={styles.value}>{price}</span></h3>
         <h3>Balance: <span className={styles.value}>{balance}</span> sats</h3>
         <h3>Fiat Balance: $ <span className={styles.value}>{fiatBalance}</span></h3>
-        <div className={styles.buttonRow}>
+        <div className={styles.buttonRowG}>
           <button className={styles.button} onClick={() => { setShowSendModal(true); playMP4(); }}>Send</button>
           <button className={`${styles.button} ${styles.green}`} onClick={() => { setShowReceiveModal(true); playMP4(); }}>Receive</button>
         </div>
@@ -191,6 +214,7 @@ export default function Home() {
           <div className={styles.slot}></div>
           <button className={styles.logout} onClick={() => { logOut(true); playMP5(); }} >-------------<br />LOGOUT<br />-------------</button>
       </div>
+      {showFAQModal && <FAQModal onClose={() => setShowFAQModal(false)} styles={styles} />}
     </>
   )
 }

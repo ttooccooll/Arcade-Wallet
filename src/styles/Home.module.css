@@ -12,7 +12,7 @@
   position:relative;
   text-align: center;
   padding-top: 1vh;
-  padding-bottom: 1vh;
+  padding-bottom: 3vh;
   background-color: #1e1e1e;
   border-radius: 15px 15px 0 0;
   z-index: 1;
@@ -26,14 +26,94 @@
 
 .modal {
   width: 85%;
-  margin: 10px auto;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+  display: flex;
+  color: limegreen;
+  text-shadow: 0 0 1px darkgreen, 0 0 1px darkgreen, 0 0 1px darkgreen,
+  0 0 1px darkgreen;
+  position: relative;
+  z-index: -4;
+}
+
+.machinez {
+  padding: 0 0 0 30px;
+  display: flex;
+  flex-direction: row;
+  text-position: center;
+  align-items: center;
+  background: #172727;
+  height: 5em;
+  width: 25%;
+  width: fit-content;
+  border-radius: 20px;
+  border: black 1px solid;
+  box-shadow:
+  0 0 12px #006400 inset,
+  0 0 15px #5E9A0A inset,
+  0 0 17px #1F4F2A inset,
+  0 0 5px #006B3C inset, rgba(0, 0, 0, 0.8) 0 4px 18px, rgba(0, 0, 0, 0.8) 0 4px 18px,
+  rgba(139, 69, 19, 0.8) 0 4px 18px;
+}
+
+.machine {
+  background-color: #1e1e1e;
+  display: flex;
+  z-index: 0;
+  margin-left: 15px;
+}
+
+.modalz {
+  position: fixed;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  width: 85%;
+  max-width: 500px; 
+  height: auto; 
   transition: all 0.3s ease;
   padding: 20px;
   display: flex;
   display-direction: column;
+  flex-wrap: nowrap;
   color: limegreen;
-  text-shadow: 0 0 1px darkgreen, 0 0 1px darkgreen, 0 0 1px darkgreen,
-  0 0 1px darkgreen;
+  z-index: 10;
+}
+
+.modalz::before {
+  content: "";
+  background: #172727;
+  position: fixed;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 80vh;
+  z-index: -1;
+  opacity: 0.8;
+  border: black solid 300px;
+  border-radius: 400px;
+}
+
+
+.modalz h2 {
+  font-family: "MyFont2";
+  text-shadow: 
+  0 0 12px #006400,
+  0 0 5px #5E9A0A,
+  0 0 7px #1F4F2A,
+  0 0 5px #006B3C;
+}
+
+.modalz p {
+  font-family: "MyFont2";
+  font-size: .1em;
+  text-shadow: 
+  0 0 12px #006400,
+  0 0 5px #5E9A0A,
+  0 0 7px #1F4F2A,
+  0 0 5px #006B3C;
+  margin-bottom: 20px;
 }
 
 .modal h2 {
@@ -42,11 +122,11 @@
   color: limegreen;
   text-shadow: 0 0 1px darkgreen, 0 0 1px darkgreen, 0 0 1px darkgreen,
   0 0 1px darkgreen;
-  margin-top: 20px;
+  margin-right: 3em;
 }
 
 .modal input {
-  padding: 5px;
+  padding: .1em;
   font-family: "MyFont2";
   font-weight: 100;
   color: rgb(255, 0, 0);
@@ -153,6 +233,18 @@
 }
 
 .buttonRow {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  padding-bottom: 25px;
+  padding-top: 15px;
+}
+
+.buttonRowG {
   width: 85%;
   margin: 0 auto;
   display: flex;
@@ -290,7 +382,6 @@ button.orange {
   border-radius: 500px;
   border: orange 1px solid; /* Changed */
   display: block;
-  align-self: flex-end;
 }
 
 button.orange:before {
@@ -442,7 +533,6 @@ button.purple {
   margin-left: 2rem;
   width: 3.6rem;
   height: 3.6rem;
-  text-align: center;
   font-size: .8rem;
   font-weight: bold;
   background-color: #800080; /* Purple */

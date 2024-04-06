@@ -125,19 +125,19 @@ button:active {
 input {
   background-color: #1e1e1e;
   border: 1px solid limegreen;
-  box-shadow: 0 0 2px limegreen, 0 0 2px limegreen, 0 0 2px limegreen,
-  0 0 2px limegreen, inset 0 0 2px limegreen, inset 0 0 2px limegreen, inset 0 0 2px limegreen,
-  inset 0 0 2px limegreen;
+  box-shadow: 
+  0 0 2px limegreen, inset 0 0 5px limegreen, inset 0 0 2px limegreen,
+  inset 0 0 2px limegreen,
+  0 0 1px #006400,
+  0 0 3px #5E9A0A,
+  0 0 1px #1F4F2A,
+  0 0 2px #006B3C;
   width: 20%;
 }
 
 label {
   font-family: "MyFont2";
   font-size: .1em;
-  color: #ddd;
-  text-position: center;
-  display: flex;
-  align-items: center;
   color: limegreen;
   text-shadow: 0 0 2px darkgreen, 0 0 1px darkgreen, 0 0 1px darkgreen,
   0 0 1px darkgreen;
