@@ -43,9 +43,7 @@ function SendModal({ onClose }) {
         <div className={styles.machinez}>
           <h2>Send Invoice</h2>
           <label>Invoice:&nbsp;</label>
-          <br />
           <input type="text" value={invoice} onChange={e => setInvoice(e.target.value)} />
-          <br />
         </div>
         <div className={styles.machine}>
           <button className={`${styles.button} ${styles.darkorange}`} type="submit">Send</button>
@@ -80,11 +78,9 @@ function ReceiveModal({ onClose }) {
       {!submitted ? (
       <form onSubmit={handleSubmit} className={styles.buttonRow}>
         <div className={styles.machinez}>
-        <h2>Receive Amount</h2>
+          <h2>Receive Amount</h2>
           <label>Amount:&nbsp;</label>
-          <br />
           <input type="number" value={amount} onChange={e => setAmount(e.target.value)} />
-          <br />
         </div>
         <div className={styles.machine}>
           <button className={`${styles.button} ${styles.orange}`} type="submit">Create</button>

@@ -29,6 +29,8 @@
   margin: 0 auto;
   transition: all 0.3s ease;
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   color: limegreen;
   text-shadow: 0 0 1px darkgreen, 0 0 1px darkgreen, 0 0 1px darkgreen,
   0 0 1px darkgreen;
@@ -40,6 +42,7 @@
   padding: 0 0 0 30px;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   text-position: center;
   align-items: center;
   background: #172727;
@@ -60,7 +63,6 @@
   background-color: #1e1e1e;
   display: flex;
   z-index: 0;
-  margin-left: 15px;
 }
 
 .modalz {
@@ -121,7 +123,7 @@
   color: limegreen;
   text-shadow: 0 0 1px darkgreen, 0 0 1px darkgreen, 0 0 1px darkgreen,
   0 0 1px darkgreen;
-  margin-right: 3em;
+  margin-right: 1em;
 }
 
 .modal input {
