@@ -105,17 +105,21 @@
   0 0 5px #5E9A0A,
   0 0 7px #1F4F2A,
   0 0 5px #006B3C;
+  margin-bottom: 25px;
+  padding-left: 5%;
 }
 
 .modalz p {
   font-family: "MyFont2";
-  font-size: .5em;
+  font-size: .8em;
   text-shadow: 
   0 0 12px #006400,
   0 0 5px #5E9A0A,
   0 0 7px #1F4F2A,
   0 0 5px #006B3C;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .modal h2 {

@@ -110,7 +110,7 @@ function FAQModal({ onClose }) {
         <h2>FAQ</h2>
         <p>Q: What is this? <br /><br /> A: It&apos;s a way to use your browser extension wallet but still feel like you&apos;re in the arcade of a pizza joint in 1989.</p>
         <p>Q: Is this trustworthy? <br /><br /> A: I woudldn&apos;t use it for anything important.</p>
-        <p>Q: Can I send you all of my sats? <br /><br /> A: I will happily take your sats. Send them to @jasonb be on stacker.news. We can also just talk and what-not. My npub is there.</p>
+        <p>Q: Can I send you all of my sats? <br /><br /> A: I will happily take your sats. Send them to @jasonb on stacker.news. We can also just talk and what-not. My npub is there.</p>
         <br />
         <button className={`${styles.button} ${styles.purple}`} onClick={() => { onClose(); playMP3(); console.log('Play button clicked'); }}>Close</button>
       </div>
